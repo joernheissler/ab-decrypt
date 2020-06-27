@@ -1,2 +1,33 @@
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
+
+[tool.poetry]
+name = "ab-decrypt"
+version = "1.0.0"
+description = "Decryptor for android backups"
+authors = ["Jörn Heissler <nosuchaddress@joern.heissler.de>"]
+license = "MIT"
+readme = "README.rst"
+homepage = "https://github.com/joernheissler/ab-decrypt"
+repository = "https://github.com/joernheissler/ab-decrypt"
+keywords = [
+    "ab",
+    "android",
+    "backup",
+]
+
+classifiers = [
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Security :: Cryptography",
+]
+
+[tool.poetry.dependencies]
+python = "^3.5"
+cryptography = "^2.9.2"
+
+[tool.poetry.scripts]
+ab-decrypt = 'ab_decrypt.cli:main'
+
 [tool.black]
 line-length = 112
